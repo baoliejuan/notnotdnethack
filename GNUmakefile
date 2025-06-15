@@ -53,6 +53,7 @@ install: all
 	touch $(GAMEDIR)/xlogfile
 	touch $(GAMEDIR)/livelog
 	mkdir -p $(GAMEDIR)/save
+	mkdir -p $(GAMEDIR)/dumplog
 
 ##### BINARIES #####
 
