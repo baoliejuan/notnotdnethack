@@ -15217,11 +15217,7 @@ makemon_core(struct permonst *ptr, register int x, register int y, register int 
 			}
 			if(mndx == PM_CRIMSON_MOON_LOTUS){
 				mongets(mtmp, DISSECTION_KIT, NO_MKOBJ_FLAGS);
-				// obj = mksobj_at(DISSECTION_KIT, mtmp->mx, mtmp->my, NO_MKOBJ_FLAGS);
-				// if(obj){
-					// bury_an_obj(obj);
-				// }
-				// obj = (struct obj *)0;
+				mksobj_at(WORM_GNAWED_SKULL, mtmp->mx, mtmp->my, NO_MKOBJ_FLAGS);
 			}
 		break;
 		case S_ZOMBIE:
