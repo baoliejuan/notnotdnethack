@@ -1138,6 +1138,7 @@ you_regen_hp(void)
 	){
 		int reglevel = maybe_polyd(youmonst.data->mlevel, u.ulevel);
 
+		reglevel -= u.ulevel*rot_count(); //Always rots based on your actual level.
 		// CON bonus (while in natural form)
 		if (!Upolyd)
 			reglevel += ((int)ACURR(A_CON) - 10);
@@ -1204,6 +1205,7 @@ you_regen_hp(void)
 		
 		// penalty for being itchy
 		reglevel -= u_healing_penalty();
+		reglevel -= rot_count(); //Additional flat modifier that can counteract non-level-based bonuses
 
 		// minimum 1
 		if (reglevel < 1)
@@ -1577,6 +1579,8 @@ san_threshhold(void)
 	
 	// penalty for being itchy
 	reglevel -= u_healing_penalty();
+	// penalty for rot upgrades
+	reglevel -= rot_count()*2;
 	
 	return reglevel;
 }
