@@ -3143,7 +3143,7 @@ research_enlightenment(void)
 			putstr(en_win, 0, " Though, you are not currently a serious student of that philosophy.");
 		}
 		else if(u.veil){
-			putstr(en_win, 0, " You have yet to feel beyond.");
+			putstr(en_win, 0, " Dissections and study are useless, as you have yet to feel beyond.");
 		}
 		else {
 			if(!(u.upreservation_upgrades&PRESERVE_MAX) || (Race_if(PM_VAMPIRE) && vampire_count() < VAMPIRE_COUNT)){
@@ -3247,7 +3247,7 @@ research_enlightenment(void)
 			putstr(en_win, 0, " Though, you are not currently a serious student of that philosophy.");
 		}
 		else if(u.veil){
-			putstr(en_win, 0, " You have yet to hear the song.");
+			putstr(en_win, 0, "  Dissections and study are useless, as you have yet to hear the song.");
 		}
 		else {
 			if(parasite_ok()){
@@ -3303,7 +3303,7 @@ research_enlightenment(void)
 			putstr(en_win, 0, " Though, you are not currently a serious student of that philosophy.");
 		}
 		else if(u.veil){
-			putstr(en_win, 0, " Your eyes have yet to open.");
+			putstr(en_win, 0, " Dissections and study are useless, as your eyes have yet to open.");
 		}
 		else {
 			if(reanimation_count() < REANIMATION_COUNT){
