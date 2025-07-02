@@ -11,7 +11,7 @@ CFLAGS = -g3
 # LDFLAGS += -pg
 LDFLAGS += 
 
-GAMELIBS = -lncursesw -lm
+GAMELIBS = $(shell pkg-config --libs ncursesw) -lm
 
 # Uncomment for user sounds support
 # Make sure to also #define USER_SOUNDS in config.h

@@ -6,7 +6,7 @@ steps:
     image: alpine
     commands:
       - apk update
-      - apk add ncurses-dev gcc libc-dev flex bison linux-headers make git python3
+      - apk add ncurses-dev gcc libc-dev flex bison linux-headers make git python3 pkgconf
       - rm include/macromagic.h
       - make
       - make install
