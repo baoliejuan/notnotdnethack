@@ -11,7 +11,13 @@ CFLAGS = -g3
 # LDFLAGS += -pg
 LDFLAGS += 
 
-GAMELIBS = $(shell pkg-config --libs ncursesw) -lm
+PKG_CONFIG = pkg-config
+
+ifeq ($(shell $(PKG_CONFIG) --version >/dev/null || echo error), error)
+    $(error $(PKG_CONFIG) not found. Please install a pkg-config implementation)
+endif
+
+GAMELIBS = $(shell $(PKG_CONFIG) --libs ncursesw) -lm
 
 # Uncomment for user sounds support
 # Make sure to also #define USER_SOUNDS in config.h
