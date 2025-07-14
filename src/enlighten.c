@@ -146,8 +146,10 @@ doattributes(void)
 			break;
 		case DOATTRIB_GENOCIDE:
 			genocide_enlightenment();
+			break;
 		case DOATTRIB_UH_RESEARCH:
 			research_enlightenment();
+			break;
 		default:
 			return MOVE_INSTANT;
 		}
