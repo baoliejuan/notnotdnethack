@@ -1872,7 +1872,7 @@ level_difficulty(void)
 		|| Role_if(PM_MADMAN))
 		&& u.ulevel < 14)
 	)
-		dpth += 10;
+		dpth += 8;
 
 	return max(1, dpth);
 }
