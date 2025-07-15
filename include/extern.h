@@ -860,6 +860,7 @@ extern struct obj *floorfood(const char *,int);
 extern void vomit(void);
 extern int eaten_stat(int,struct obj *);
 extern void food_disappears(struct obj *);
+extern void food_extracted(struct obj *);
 extern void food_substitution(struct obj *,struct obj *);
 extern boolean bite_monster(struct monst *);
 extern void give_intrinsic(int, long);
