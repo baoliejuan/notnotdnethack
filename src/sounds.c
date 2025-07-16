@@ -912,7 +912,7 @@ domonnoise(struct monst *mtmp, boolean chatting)
 	//Template and profession adjustments
 	if(is_silent_mon(mtmp))
 		soundtype = MS_SILENT;
-	else if(is_dollable(mtmp->data) && mtmp->m_insight_level)
+	else if(is_dollable_mtyp(mtmp->mtyp) && mtmp->m_insight_level)
 		soundtype = MS_STATS;
 	else if(mtmp->ispriest)
 		soundtype = MS_PRIEST;
@@ -7966,7 +7966,7 @@ dodollmenu(struct monst *dollmaker)
 		incntlet++; //Advance anyway
 	}
 	
-	if(is_dollable(dollmaker->data)){
+	if(is_dollable_mtyp(dollmaker->mtyp)){
 		Sprintf(buf, "doll tear ($%d)", 8000);
 		any.a_int = DOLL_S_TEAR;	/* must be non-zero */
 		add_menu(tmpwin, NO_GLYPH, &any,
