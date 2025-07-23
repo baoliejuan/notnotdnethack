@@ -9,7 +9,7 @@
 #	and receive your quest assignment.
 #
 MAZE: "Pri-strt",' '
-FLAGS: noteleport,hardfloor
+FLAGS: hardfloor
 GEOMETRY:center,center
 MAP
 ............................................................................
