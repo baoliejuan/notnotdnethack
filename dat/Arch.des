@@ -170,7 +170,7 @@ ENDMAP
 RANDOM_PLACES:(40,11),(67,01),(61,17),(56,01),(73,10),(59,08)
 
 OBJECT[10%]:')',"macuahuitl",place[0],uncursed,0,"The Macuahuitl of Quetzalcoatl"
-OBJECT[10%]:'(',"mask",place[1],uncursed,0,"The Mask of Tlaloc"
+#OBJECT[10%]:'(',"mask",place[1],uncursed,0,"The Mask of Tlaloc"
 #OBJECT[10%]:'[',"orcish shield",place[2],uncursed,0,"The Shield of the All-Seeing"
 #OBJECT[10%]:'[',"elven shield",place[3],uncursed,0,"The Shield of Yggdrasil"
 #OBJECT[10%]:')',"sickle",place[4],uncursed,0,"Gaia's Fate"
@@ -207,11 +207,9 @@ REGION:(00,00,75,19),unlit,"ordinary"
 
 # Stair is relatively unobstructed
 STAIR:(00,10),up
-# Three altars are randomly split across 5 places
+# One altar is placed in one of 5 places
 ALTAR:place[0],align[0],altar
-ALTAR:place[1],align[1],altar
-ALTAR:place[2],align[2],altar
-# A stair and a mummy trap in the others
+# A stair and a mummy trap in others
 STAIR:place[3],down
 TRAP:"mummy trap",place[4]
 OBJECT:'(',random,place[4]
@@ -450,7 +448,7 @@ STAIR:(38,10),up
 # Non diggable walls
 NON_DIGGABLE:(00,00,75,19)
 # The altar of Tezcatlipoca.  Unattended.
-ALTAR:place[0],noalign,altar,"Tezcatlipoca"
+ALTAR:place[0],chaos,altar,"Tezcatlipoca"
 # Magic chest in another alcove
 OBJECT:'(',"magic chest",place[1]
 # Objects

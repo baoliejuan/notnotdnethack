@@ -1961,19 +1961,29 @@ A("The Eye of the Oracle",			EYEBALL,				(const char *)0,
 	),
 
 /*Arc redesign by Riker*/
-A("The Macuahuitl of Quetzalcoatl",	MACUAHUITL,				(const char *)0,
-	3000L, MT_DEFAULT, MZ_DEFAULT, WT_DEFAULT,
+A("The Macuahuitl of Quetzalcoatl",        MACUAHUITL,                                (const char *)0,
+        3000L, MT_DEFAULT, MZ_DEFAULT, WT_DEFAULT,
+        A_LAWFUL, PM_ARCHEOLOGIST, NON_PM, TIER_C, (ARTG_NOGEN|ARTG_NOWISH),
+        NO_MONS(),
+        ATTK(AD_PHYS, 5, 0), (ARTA_VORPAL),
+        PROPS(), NOFLAG,
+        PROPS(), NOFLAG,
+        NOINVOKE, NOFLAG
+        ),
+/*Arc redesign by Riker*/
+A("The Torch of Xolotl",	TORCH,				(const char *)0,
+	3000L, BONE, MZ_DEFAULT, WT_DEFAULT,
 	A_LAWFUL, PM_ARCHEOLOGIST, NON_PM, TIER_C, (ARTG_NOGEN|ARTG_NOWISH),
 	NO_MONS(),
-	ATTK(AD_PHYS, 5, 0), (ARTA_VORPAL),
-	PROPS(), NOFLAG,
-	PROPS(), NOFLAG,
+	ATTK(AD_ELEC, 5, 10), (ARTA_VORPAL),
+	PROPS(EXTRAMISSION), NOFLAG,
+	PROPS(FIRE_RES, SHOCK_RES), NOFLAG,
 	NOINVOKE, NOFLAG
 	),
 /*Arc redesign by Riker*/
-A("The Mask of Tlaloc",				MASK,					(const char *)0,
+A("The Mask of Tlaloc",				MASK,					"fanged %s",
 	2500L, MT_DEFAULT, MZ_DEFAULT, WT_DEFAULT,
-	A_LAWFUL, PM_ARCHEOLOGIST, NON_PM, TIER_A, (ARTG_NOGEN|ARTG_NOWISH|ARTG_MAJOR),
+	A_NEUTRAL, PM_ARCHEOLOGIST, NON_PM, TIER_A, (ARTG_NOGEN|ARTG_NOWISH),
 	NO_MONS(),
 	NO_ATTK(), NOFLAG,
 	PROPS(WATERPROOF), NOFLAG,
@@ -1981,13 +1991,23 @@ A("The Mask of Tlaloc",				MASK,					(const char *)0,
 	NOINVOKE, NOFLAG
 	),
 /*Arc redesign by Riker*/
+A("The Flute of Tezcatlipoca",				MAGIC_FLUTE,	"bloodied clay %s",
+	2500L, MINERAL, MZ_DEFAULT, WT_DEFAULT,
+	A_CHAOTIC, PM_ARCHEOLOGIST, NON_PM, TIER_A, (ARTG_NOGEN|ARTG_NOWISH|ARTG_MAJOR),
+	NO_MONS(),
+	NO_ATTK(), NOFLAG,
+	PROPS(), NOFLAG,
+	PROPS(STEALTH, DISPLACED, REFLECTING, REGENERATION, LIFESAVED), NOFLAG,
+	SMOKE_CLOUD, NOFLAG
+	),
+/*Arc redesign by Riker*/
 A("Ehecailacocozcatl",				AMULET_OF_MAGICAL_BREATHING,			(const char *)0,
 	3000L, SHELL_MAT, MZ_DEFAULT, WT_DEFAULT,
 	A_LAWFUL, PM_ARCHEOLOGIST, NON_PM, TIER_D, (ARTG_NOGEN|ARTG_NOWISH|ARTG_FXALGN),
 	NO_MONS(),
 	NO_ATTK(), NOFLAG,
-	PROPS(ENERGY_REGENERATION, REFLECTING), NOFLAG,
-	PROPS(), NOFLAG,
+	PROPS(REFLECTING, FREE_ACTION), NOFLAG,
+	PROPS(ENERGY_REGENERATION), NOFLAG,
 	WIND_PETS, NOFLAG
 	),
 /*Arc redesign by Riker*/
@@ -2002,7 +2022,7 @@ A("Amhimitl",						JAVELIN,				(const char *)0,
 	),
 /*Arc redesign by Riker*/
 /* can "sacrifice" monsters it kills, reducing prayer timeout */
-A("The Tecpatl of Huhetotl",		TECPATL,				(const char *)0,
+A("The Tecpatl of Huehueteotl",		TECPATL,				(const char *)0,
 	3000L, BONE, MZ_DEFAULT, WT_DEFAULT,
 	A_CHAOTIC, PM_ARCHEOLOGIST, NON_PM, TIER_C, (ARTG_NOGEN|ARTG_NOWISH|ARTG_FXALGN),
 	NO_MONS(),
@@ -2033,7 +2053,7 @@ A("Smoking Mirror",					SPEAR,		(const char *)0,
 
 /*From archeologist patch*/
 A("Itlachiayaque",					ROUNDSHIELD,		(const char *)0,
-	3000L, OBSIDIAN_MT, MZ_DEFAULT, WT_DEFAULT,
+	3000L, OBSIDIAN_MT, MZ_DEFAULT, 60,
 	A_LAWFUL, PM_ARCHEOLOGIST, NON_PM, TIER_B, (ARTG_NOGEN|ARTG_NOWISH|ARTG_MAJOR),
 	NO_MONS(),
 	NO_ATTK(), NOFLAG,
