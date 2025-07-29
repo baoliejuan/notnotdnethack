@@ -2947,6 +2947,9 @@ describe_item(struct obj *obj, int otyp, int oartifact, winid *datawin)
 			case ART_PROFANED_GREATSCYTHE:
 				Strcat(buf, "damage to living and undead.");
 				break;
+			case ART_TORCH_OF_XOLOTL:
+				Strcat(buf, "shock damage during the day and drains foes during the night, but only when lit.");
+				break;
 			case ART_GIANTSLAYER:
 				Strcat(buf, "damage to large creatures.");
 				break;
@@ -3225,8 +3228,8 @@ describe_item(struct obj *obj, int otyp, int oartifact, winid *datawin)
 				Sprintf(buf2, "Hamstrings giants & other boulder-throwers, reducing their speed by 6 movement points.");
 				OBJPUTSTR(buf2);
 			}
-			if(obj->oartifact == ART_TECPATL_OF_HUHETOTL){
-				Sprintf(buf2, "Drinks the blood of targets that have any, dealing +2d4 damage and potentially sacrificing slain foes.");
+			if(obj->oartifact == ART_TECPATL_OF_HUEHUETEOTL){
+				Sprintf(buf2, "Drinks the blood of targets that have any, dealing +4d4 damage and potentially sacrificing slain foes.");
 				OBJPUTSTR(buf2);
 			}
 			if(obj->oartifact == ART_PLAGUE && monstermoves < artinstance[ART_PLAGUE].PlagueDuration){

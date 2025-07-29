@@ -651,6 +651,10 @@ add_altar(int x, int y, aligntyp alignment, boolean shrine, int godnum)
 			mksobj_at(PHLEBOTOMY_KIT, x, y, NO_MKOBJ_FLAGS);
 		}
 	}
+	if (Is_qlocate(&u.uz) && Role_if(PM_ARCHEOLOGIST)) {
+		altars[altarindex].god = rn2(2) ? GOD_XOLOTL : GOD_TLALOC;
+		altars[altarindex].align = galign(altars[altarindex].god);
+	}
 	
 	altarindex++;
 }

@@ -1501,7 +1501,7 @@ hatesobjdmg(struct monst *mdef, struct obj *otmp, struct monst *magr)
 			diesize = 20;
 		else if (otmp->oartifact == ART_AMHIMITL)
 		{	ndice = 3; diesize = 4; }
-		else if (otmp->oartifact == ART_TECPATL_OF_HUHETOTL) /* SCOPECREEP: add ART_TECPATL_OF_HUHETOTL to is_unholy() macro */
+		else if (otmp->oartifact == ART_TECPATL_OF_HUEHUETEOTL)
 		{	ndice = (otmp->cursed ? 4 : 2); diesize = 4; }
 
 		if(otmp->otyp == CHIKAGE && otmp->obj_material == HEMARGYOS){
