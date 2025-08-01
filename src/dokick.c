@@ -741,6 +741,13 @@ kickstr(char *buf)
 int
 dotailkick(int dx, int dy)
 {
+	if(!dx && !dy && !getdir((char *)0)) return MOVE_CANCELLED;
+	if(!dx && !dy){
+		dx = u.dx;
+		dy = u.dy;
+	}
+	if(!dx && !dy) return MOVE_CANCELLED;
+
 	int x = u.ux + dx;
 	int y = u.uy + dy;
 	if(!isok(x,y) || !MON_AT(x, y)) return MOVE_CANCELLED;
@@ -782,9 +789,11 @@ dokick_core(int dx, int dy)
 	boolean no_kick = FALSE;
 	char buf[BUFSZ];
 
-	if (nolimbs(youracedata) || slithy(youracedata)) {
+	if (nolimbs(youracedata)) {
 		You("have no legs to kick with.");
 		no_kick = TRUE;
+	} else if (slithy(youracedata)){
+		return dotailkick(dx,dy);
 	} else if (u.usteed) {
 		if (!dx && !dy && yn_function("Kick your steed?", ynchars, 'y') == 'y') {
 		    You("kick %s.", mon_nam(u.usteed));
