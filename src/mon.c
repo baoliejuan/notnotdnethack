@@ -587,6 +587,15 @@ make_corpse(register struct monst *mtmp)
 				place_object(otmp, x, y);
 			}
 		goto default_1;
+		case PM_VERMIURGE:
+			if (!rn2(3) && !(
+				(art_already_exists(ART_SCORPION_CARAPACE)) ||
+				(mtmp->mrevived && rn2(20))
+				)) {
+				otmp = oname(mksobj(SCALE_MAIL, 0), artiname(ART_SCORPION_CARAPACE));
+				place_object(otmp, x, y);
+			}
+		goto default_1;
 	    case PM_LONG_WORM:
 			(void) mksobj_at(WORM_TOOTH, x, y, NO_MKOBJ_FLAGS);
 		goto default_1;
