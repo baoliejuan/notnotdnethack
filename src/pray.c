@@ -1889,7 +1889,7 @@ dosacrifice(void)
 					if (uwep->spe < 0)
 						uwep->spe = 0;
 					uwep->oeroded = uwep->oeroded2 = 0;
-					uwep->oerodeproof = TRUE;
+					uwep->obj_material = MERCURIAL;
 
 					exercise(A_WIS, TRUE);
 
