@@ -11324,7 +11324,7 @@ doapply(void)
 		res = use_towel(obj);
 	break;
 	case CRYSTAL_BALL:
-		res = use_crystal_ball(obj);
+		res = use_crystal_ball(&obj);
 	break;
 	case MAGIC_MARKER:
 		res = dowrite(obj);

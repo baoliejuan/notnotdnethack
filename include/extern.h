@@ -408,7 +408,7 @@ extern int pet_detect_and_tame(struct obj *);
 extern int pet_detect_and_heal(struct obj *);
 extern int trap_detect(struct obj *);
 extern const char *level_distance(d_level *);
-extern int use_crystal_ball(struct obj *);
+extern int use_crystal_ball(struct obj **);
 extern void do_mapping(void);
 extern void do_vicinity_map(int,int);
 extern void cvt_sdoor_to_door(struct rm *);
