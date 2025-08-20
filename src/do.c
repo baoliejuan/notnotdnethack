@@ -930,7 +930,7 @@ dodown(void)
 			if (flags.autodig && !flags.nopick &&
 				uwep && (is_pick(uwep) || (is_lightsaber(uwep) && litsaber(uwep)) || (uwep->otyp == SEISMIC_HAMMER))) {
 				return use_pick_axe2(uwep);
-			} else if(uarmg && is_pick(uarmg)){
+			} else if(flags.autodig && uarmg && is_pick(uarmg)){
 				return use_pick_axe2(uarmg);
 			} else {
 				if(levl[u.ux][u.uy].typ == STAIRS){
