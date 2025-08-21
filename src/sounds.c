@@ -975,7 +975,7 @@ domonnoise(struct monst *mtmp, boolean chatting)
 				if (smith_offer_price(charge, mtmp) == FALSE) break;
 				u.utats |= selection;
 				pline("%s tattoos a %s onto you.",Monnam(mtmp),tat_to_name(selection));
-				You_feel("gilded.");
+				You_feel("your coin purse's weight vanish.");
 				break;
 			case TAT_UNKNOWN:
 				charge = (int) 8000 * discount;
@@ -3283,7 +3283,7 @@ dotatmenu(const char *prompt)
 			'o', 0, ATR_NONE, tat_to_name(TAT_FOUNTAIN),
 			MENU_UNSELECTED);
 	}
-	if(!(u.utats & TAT_CROESUS) && is_croesus_valid){
+	if(!(u.utats & TAT_CROESUS) && is_croesus_valid && !Race_if(PM_LEPRECHAUN)){
 		any.a_int = TAT_CROESUS;	/* must be non-zero */
 		add_menu(tmpwin, NO_GLYPH, &any,
 			'c', 0, ATR_NONE, tat_to_name(TAT_CROESUS),
