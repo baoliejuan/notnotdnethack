@@ -4244,7 +4244,7 @@ newgame(void)
 			)){
 				otmp = oname(otmp, artilist[inher_arti].name);
 				fully_identify_obj(otmp);
-				expert_weapon_skill(weapon_type(otmp));
+				expert_weapon_skill(is_shield(otmp) ? P_SHIELD : weapon_type(otmp));
 				if (Race_if(PM_LEPRECHAUN)) {
 					int gold = otmp->owt * 100;
 #ifndef GOLDOBJ
