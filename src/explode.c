@@ -920,7 +920,6 @@ scatter(
 	register struct obj *otmp;
 	register int tmp;
 	int farthest = 0;
-	uchar typ;
 	long qtmp;
 	boolean used_up;
 	boolean individual_object = obj ? TRUE : FALSE;
@@ -1019,12 +1018,11 @@ scatter(
 		   if ((stmp->range-- > 0) && (!stmp->stopped)) {
 			bhitpos.x = stmp->ox + stmp->dx;
 			bhitpos.y = stmp->oy + stmp->dy;
-			typ = levl[bhitpos.x][bhitpos.y].typ;
 			if(!isok(bhitpos.x, bhitpos.y)) {
 				bhitpos.x -= stmp->dx;
 				bhitpos.y -= stmp->dy;
 				stmp->stopped = TRUE;
-			} else if(!ZAP_POS(typ) ||
+			} else if(!ZAP_POS(levl[bhitpos.x][bhitpos.y].typ) ||
 					closed_door(bhitpos.x, bhitpos.y)) {
 				bhitpos.x -= stmp->dx;
 				bhitpos.y -= stmp->dy;
