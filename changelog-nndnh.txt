@@ -8,7 +8,7 @@ Octopode race
 	Special spell: poison spray
 	Human HP and energy growth
 	Radius-2 low light vision
-	Medium sized. Can wear barded helmets and soft hats, cloaks, dragon scales (not scale mail) and waistcloths and living armor, shields
+	Medium sized. Can wear barded helmets and soft hats, cloaks, dragon scales (not scale mail) and waistcloths and living armor, shields, belts
 	Extra 1d8 tentacle wrap attack that can drown if over water
 	+level/10 bonus to natural DR and +level/2 bonus to natural AC
 	Starts with stone resistance, poison resistance, stealth, swimming, magical breathing, waterproofing

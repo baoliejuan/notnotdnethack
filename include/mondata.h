@@ -915,7 +915,7 @@
 #define can_wear_amulet(ptr)	(has_head(ptr) || (ptr->mflagsb&MB_CAN_AMULET))
 #define can_wear_blindf(ptr)	(has_head(ptr))
 #define can_wear_boots(ptr)	((humanoid(ptr) || humanoid_feet(ptr)) && !nofeet(ptr) && !nolimbs(ptr))
-#define can_wear_belt(ptr)	(!naoid(ptr))
+#define can_wear_belt(ptr)	(!naoid(ptr) || ptr->mtyp == PM_OCTOPODE)
 #define shirt_match(ptr,obj)	((obj->otyp != BODYGLOVE && upper_body_match(ptr,obj)) || \
 								full_body_match(ptr,obj))
 #define upper_body_match(ptr,obj)	(((ptr->mflagsb&MB_HUMANOID) && (obj->bodytypeflag&MB_HUMANOID)) || \
