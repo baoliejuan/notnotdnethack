@@ -1,6 +1,6 @@
 Octopode race
 	Any alignment.
-	Roles: Binder, Convict, Acu, Monk, Pirate, Rogue, Tourist, Wizard
+	Roles: Binder, Convict, Acu, Monk, Pirate, Rogue, Tourist, Wizard, Barbarian
 	Can wear 8 rings
 	Attribute caps:
 		Str   Int Wis Dex Con Cha
