@@ -4404,7 +4404,7 @@ Mb_hit(struct monst *magr, struct monst *mdef, struct obj *mb, int *dmgptr, int 
 }
 
 
-STATIC_OVL boolean
+static boolean
 Am_hit(struct monst *magr, struct monst *mdef, struct obj *mb, int *dmgptr, int dieroll, boolean vis, char *hittee, char *type)
 {
     struct permonst *old_uasmon;

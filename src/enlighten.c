@@ -3168,7 +3168,7 @@ mutations_enlightenment(void)
 static void
 genocide_enlightenment(void)
 {
-    list_genocided('y', FALSE, FALSE, TRUE);
+    list_genocided('y', FALSE, FALSE);
 }
 
 static void

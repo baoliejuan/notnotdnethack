@@ -1035,7 +1035,11 @@ makelevel(void)
 		    return;
 		}
 	    /* check for special levels */
+#ifdef REINCARNATION
 	    if (slev && !Is_rogue_level(&u.uz))
+#else
+	    if (slev)
+#endif
 	    {
 		    makemaz(slev->proto);
 		    return;

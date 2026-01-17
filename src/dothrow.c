@@ -233,9 +233,7 @@ zap_flamethrower(struct obj *obj, int shots, int shotlimit)
 }
 
 int
-zap_sapburner(obj, shots, shotlimit)
-struct obj *obj;
-int shots, shotlimit;
+zap_sapburner(struct obj *obj, int shots, int shotlimit)
 {
 	int cost = 1;
 	
@@ -483,7 +481,7 @@ walk_path(coord *src_cc, coord *dest_cc, boolean (*check_proc)(void *, int, int)
  */
 
 boolean
-jumping_polearm(genericptr_t arg, int x, int y)
+jumping_polearm(void *arg, int x, int y)
 {
 	struct monst *mon = m_at(x, y);
 	static long last_messaged = 0L;

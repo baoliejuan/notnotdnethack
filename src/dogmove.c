@@ -792,7 +792,7 @@ dog_invent(register struct monst *mtmp, register struct edog *edog, int udist)
  * technically could return -1/0/1 (dog's desire to approach player) or -2 (abort move)
  * but currently only returns 0 (if no target found) or 1 (target found)
  */
-STATIC_OVL int
+static int
 pet_sphere_goal(struct monst *mtmp, struct edog *edog, int after, int udist, int whappr)
 {
 	int appr = 0;

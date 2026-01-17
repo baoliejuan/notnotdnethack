@@ -2450,9 +2450,7 @@ moldy_corpse(void * arg, long timeout)
 /* Revive the corpse as a gray mold via a timeout. */
 /*ARGSUSED*/
 void
-gray_moldy_corpse(arg, timeout)
-genericptr_t arg;
-long timeout;
+gray_moldy_corpse(void *arg, long timeout)
 {
 	int pmtype, oldtyp, oldquan;
 	struct obj *body = (struct obj *) arg;

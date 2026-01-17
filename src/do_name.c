@@ -748,7 +748,7 @@ oname(struct obj *obj, const char *name)
 			if(obj->obj_material != MERCURIAL){
 				tmp = 0;
 				start_timer(d(8,8), TIMER_OBJECT,
-							REVERT_MERC, (genericptr_t)obj);
+							REVERT_MERC, (void *)obj);
 			}
 			if(Role_if(PM_KENSEI) && u.role_variant == ART_SKY_REFLECTED){
 				expert_weapon_skill(objects[obj->otyp].oc_skill);

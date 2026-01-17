@@ -16017,7 +16017,7 @@ hmoncore(struct monst *magr, struct monst *mdef, struct attack *attk, struct att
 		}
 		if(Role_if(PM_KENSEI)){
 			if (sgn(u.ualign.type) > 0 
-			    && ((poisons & ~OPOISON_HALLU) 
+			    && ((allpoisons & ~OPOISON_HALLU)
 			        || (u.role_variant != ART_SILVER_SKY && u.role_variant != ART_SKY_REFLECTED)
 			        )
 			    ) {
@@ -17918,7 +17918,7 @@ hmoncore(struct monst *magr, struct monst *mdef, struct attack *attk, struct att
 				forget(25);	/* lose 25% of memory */
 				if (!(uarmh && uarmh->otyp == DUNCE_CAP)) {
 					/* No such thing as mindless players... */
-					check_brainlessness();
+					check_brainlessness("brainlessness");
 				}
 			}
 			else if (canseemon(mdef)){
@@ -25079,7 +25079,7 @@ blacklight_tentacles_suck_x(struct monst *magr, struct monst *mdef, int dmg, int
 			}
 			if (!(uarmh && uarmh->otyp == DUNCE_CAP)) {
 				/* No such thing as mindless players... */
-				check_brainlessness();
+				check_brainlessness("brainlessness");
 			}
 		}
 		else {

@@ -15,7 +15,6 @@ static int prayer_done(void);
 static struct obj *worst_cursed_item(void);
 static int in_trouble(void);
 static void fix_worst_trouble(int);
-static void pleased(int);
 static void god_zaps_you(int);
 static void fry_by_god(int);
 static void consume_offering(struct obj *);

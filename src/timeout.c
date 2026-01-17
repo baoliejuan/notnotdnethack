@@ -2911,9 +2911,7 @@ revert_mercurial(void *arg, long timeout)
 }
 
 void
-revert_aureate_deluge(arg, timeout)
-genericptr_t arg;
-long timeout;
+revert_aureate_deluge(void *arg, long timeout)
 {
 	struct obj *obj = (struct obj *) arg;
 	if(check_oprop(obj, OPROP_GOLDW)){
