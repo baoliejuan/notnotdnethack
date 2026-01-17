@@ -881,6 +881,9 @@ select_gift_artifact(aligntyp alignment)
 			/* skip cross-aligned artifacts */
 			skip_if(a->alignment != A_NONE && a->alignment != alignment);
 
+			/* skip race-favoring intel artifacts (they blast but don't evade), unless your current HP is high enough to survive a max-rolled blast */
+			skip_if(a->gflags & ARTG_MAJOR && a->race != NON_PM && !Race_if(a->race) && *hp(&youmonst) < 45);
+
 			/* if we made it through that gauntlet, we're good */
 			eligible[n++] = m;
 		}
@@ -16644,6 +16647,7 @@ int merge_skies(struct obj **opptr)
 				artinstance[ART_SKY_REFLECTED].ZerthMaterials |= ZMAT_LEAD;
 			break;
 		}
+		artinstance[ART_SKY_REFLECTED].ZerthMaterials |= ZMAT_SILVER;
 		if(sky1->blessed || sky2->blessed)
 			bless(amalgam);
 		else if(sky1->cursed || sky2->cursed)

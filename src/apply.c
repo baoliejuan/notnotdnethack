@@ -3952,7 +3952,7 @@ doresearch(void)
 		}
 
 		if (otmp->researched) {
-			pline("Someone has already disected this corpse.");
+			pline("Someone has already dissected this corpse.");
 			return MOVE_CANCELLED;
 		}
 		
@@ -4821,7 +4821,7 @@ use_dissection_kit(struct obj *obj)
 	}
 
 	if (otmp->researched) {
-		pline("Someone has already disected this corpse.");
+		pline("Someone has already dissected this corpse.");
 		return;
 	}
 	
@@ -4850,7 +4850,13 @@ use_dissection_kit(struct obj *obj)
 		// pline("That's too insubstantial to dissect.");
 		// return;
 	// }
-	splitobj(otmp, otmp->quan - 1L);
+	boolean hold_another = FALSE;
+	if(otmp->quan > 1L){
+		otmp = splitobj(otmp, 1L);
+		if(otmp->where == OBJ_INVENT){
+			hold_another = TRUE;
+		}
+	}
 	consume_obj_charge(obj, TRUE);
 
 	//San check
@@ -4971,7 +4977,10 @@ use_dissection_kit(struct obj *obj)
 			You("have devised a new experiment into the great animating thoughts.");
 		}
 	}
-	
+	if(hold_another){
+		freeinv(otmp);
+		hold_another_object(otmp, "You drop %s!", doname(otmp), (const char *)0);
+	}
 }
 
 static int

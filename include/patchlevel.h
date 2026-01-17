@@ -3,7 +3,7 @@
 /* NetHack may be freely redistributed.  See license for details. */
 
 /* NetHack 3.4.3, dNethack version 3.15.1 */
-#define VERSION_MAJOR	2025
+#define VERSION_MAJOR	2026
 /* Started at 3.4.3, for the nethack version. Incremented straight 
    to 3.6 with the advent of the Noble role, counting the initial
    release as 3.5 (with Pirate already in, I think?).
@@ -15,7 +15,7 @@
    Incremented to 3.11 with the introduction Anachrononauts.
    Incremented to 3.12 with the introduction Magic chests, scrolls of antimagic, resistance, and consecration, YARevison to chaos quest, beter resistance-from-diet, and lightsaber forms.
 */
-#define VERSION_MINOR	5
+#define VERSION_MINOR	1
 /*
  * PATCHLEVEL is updated for each release.
  *
@@ -62,10 +62,10 @@
 #define EDITLEVEL	0
 
 #define COPYRIGHT_BANNER_A \
-"notnotdNetHack, Copyright 2024-2025"
+"notnotdNetHack, Copyright 2024-2026"
 
 #define COPYRIGHT_BANNER_B \
-"  Based on notdNetHack, Copyright 2017-2025"
+"  Based on notdNetHack, Copyright 2017-2026"
 
 #define COPYRIGHT_BANNER_C \
 "    Based on dNetHack, Copyright 2012-2025"
