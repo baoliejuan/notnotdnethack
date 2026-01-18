@@ -54,7 +54,7 @@
  * 3.24.0: Undead Hunter role, expert weapon skill traits, belts and belt slot, explosions and wizard tweaks and cult spellcasting, smithing (primarily blood smithing), dungeon restocking, more insight monsters, more ways to get Yog Sothoth, Oracle artifact birthplaces, pommeling style, Dirge interacts with impurity and shubbie, sword-and-pistol handling, HP and healing potion rebalance, Spire restricts artifacts and wands, midas potions, migo mist projectors and generalized clouds, misc minor buffs and bugfixes
  * 3.25.0: Kensei role, Convict quest revision, minor  Archeologist quest revision, Fafnir reworked into Maegera, seducer rework, DroHea tweak (priestess/wizard bonuses), signature artifact prototype (oona can use rosp), various fixes and tweaks.
  */
-#define PATCHLEVEL	16
+#define PATCHLEVEL	18
 /*
  * Incrementing EDITLEVEL can be used to force invalidation of old bones
  * and save files.
