@@ -5,7 +5,10 @@
 #ifndef CONFIG1_H
 #define CONFIG1_H
 
-#define _POSIX_C_SOURCE 200809L
+/* newer versions of glibc #define this to a higher value if _GNU_SOURCE is defined */
+#if _POSIX_C_SOURCE < 200809L
+# define _POSIX_C_SOURCE 200809L
+#endif
 
 #if defined(__linux__) && defined(__GNUC__) && !defined(_GNU_SOURCE)
 /* ensure _GNU_SOURCE is defined before including any system headers */
